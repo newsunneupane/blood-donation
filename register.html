@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Donor</title>
+</head>
+<body>
+    <h2>Register New Donor</h2>
+    <form action="register.php" method="POST">
+        <label>Name:</label><input name="name" required><br>
+        <label>Age:</label><input name="age" type="number" required><br>
+        <label>Blood Group:</label><input name="blood_group" required><br>
+        <label>Gender:</label>
+        <select name="gender">
+            <option>Male</option><option>Female</option><option>Other</option>
+        </select><br>
+        <label>Email:</label><input name="email"><br>
+        <label>Phone:</label><input name="phone"><br>
+        <label>Address:</label><textarea name="address" required></textarea><br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

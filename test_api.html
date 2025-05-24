@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API Tester</title>
+</head>
+<body>
+  <h1>Test GET Donors</h1>
+  <button onclick="getDonors()">Fetch Donors</button>
+  <pre id="output"></pre>
+
+  <script>
+    function getDonors() {
+      fetch("http://localhost/blood_donation/api/get_donors.php")
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(err => {
+          document.getElementById("output").textContent = "Error: " + err;
+        });
+    }
+  </script>
+</body>
+</html>
